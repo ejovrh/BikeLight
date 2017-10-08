@@ -1712,20 +1712,20 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="ARDUINO" value="ARDUINOUNO" x="0" y="0"/>
-<element name="IC1" library="MCP2561-2 - High-Speed CAN Transceiver" package="DFN10" value="" x="33.02" y="36.83" rot="R180"/>
-<element name="IC2" library="MCP2515-I-ML - Standalonce CAN Controller with SPI Interface" package="QFN20" value="" x="34.29" y="41.91" rot="MR180"/>
+<element name="BRD1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="ARDUINO" value="" x="0" y="0"/>
+<element name="IC4" library="MCP2561-2 - High-Speed CAN Transceiver" package="DFN10" value="" x="33.02" y="36.83" rot="R180"/>
+<element name="IC1" library="MCP2515-I-ML - Standalonce CAN Controller with SPI Interface" package="QFN20" value="" x="34.29" y="41.91" rot="MR180"/>
 <element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-12.7" y="-15.24"/>
-<element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-12.7" y="-21.59"/>
+<element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-12.7" y="-21.59"/>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-12.7" y="-27.94"/>
-<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="120" x="33.02" y="25.4"/>
-<element name="X1" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="22-23-2021" x="33.02" y="30.48" rot="R180">
+<element name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="120" x="33.02" y="25.4"/>
+<element name="X2" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="22-23-2021" x="33.02" y="30.48" rot="R180">
 <attribute name="MF" value="MOLEX" x="33.02" y="30.48" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="22-23-2021" x="33.02" y="30.48" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1462926" x="33.02" y="30.48" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="25C3832" x="33.02" y="30.48" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="X2" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="22-23-2021" x="-5.08" y="-60.96">
+<element name="X1" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="22-23-2021" x="-5.08" y="-60.96">
 <attribute name="MF" value="MOLEX" x="-5.08" y="-60.96" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="22-23-2021" x="-5.08" y="-60.96" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="1462926" x="-5.08" y="-60.96" size="1.778" layer="27" display="off"/>
@@ -1737,47 +1737,48 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="39.37" y="41.91" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="39.37" y="41.91" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-22.86" y="-72.39"/>
-<element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-22.86" y="-78.74"/>
-<element name="IC4" library="Molex SD-47309 SD Card Slot" package="MICRO_SD_CONNECTOR" value="MICROSD_SPI_MODE" x="49.53" y="46.99" rot="R270"/>
-<element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-36.83" y="-85.09"/>
-<element name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-36.83" y="-91.44"/>
+<element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-22.86" y="-72.39"/>
+<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-22.86" y="-78.74"/>
+<element name="IC2" library="Molex SD-47309 SD Card Slot" package="MICRO_SD_CONNECTOR" value="MICROSD_SPI_MODE" x="49.53" y="46.99" rot="R270"/>
+<element name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-36.83" y="-85.09"/>
+<element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-36.83" y="-91.44"/>
 <element name="IC5" library="TXB0106 - Logic Level Translator" package="VQFN16" value="" x="45.72" y="41.91" rot="MR270"/>
 <element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-36.83" y="-104.14"/>
 <element name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF" x="-36.83" y="-110.49"/>
 <element name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-36.83" y="-116.84"/>
+<element name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k" x="-36.83" y="-123.19"/>
 </elements>
 <signals>
 <signal name="VIN">
-<contactref element="U$1" pad="VIN"/>
+<contactref element="BRD1" pad="VIN"/>
 </signal>
 <signal name="3V">
-<contactref element="U$1" pad="3V"/>
+<contactref element="BRD1" pad="3V"/>
 </signal>
 <signal name="N$1">
-<contactref element="U$1" pad="RESET"/>
+<contactref element="BRD1" pad="RESET"/>
 </signal>
 <signal name="N$2">
-<contactref element="U$1" pad="5V"/>
+<contactref element="BRD1" pad="5V"/>
 </signal>
 <signal name="GND">
-<contactref element="U$1" pad="GND"/>
-<contactref element="U$1" pad="GND2"/>
-<contactref element="U$1" pad="GND1"/>
-<contactref element="IC1" pad="VSS"/>
-<contactref element="IC1" pad="GND"/>
-<contactref element="IC2" pad="GND1"/>
-<contactref element="IC2" pad="GND6"/>
-<contactref element="IC2" pad="GND"/>
-<contactref element="C1" pad="2"/>
-<contactref element="C2" pad="2"/>
-<contactref element="C3" pad="2"/>
-<contactref element="IC3" pad="GND"/>
+<contactref element="BRD1" pad="GND"/>
+<contactref element="BRD1" pad="GND2"/>
+<contactref element="BRD1" pad="GND1"/>
 <contactref element="IC4" pad="VSS"/>
-<contactref element="IC4" pad="GND2"/>
-<contactref element="IC4" pad="POL"/>
-<contactref element="IC4" pad="GND4"/>
+<contactref element="IC4" pad="GND"/>
+<contactref element="IC1" pad="GND1"/>
+<contactref element="IC1" pad="GND6"/>
+<contactref element="IC1" pad="GND"/>
+<contactref element="C1" pad="2"/>
 <contactref element="C4" pad="2"/>
+<contactref element="C2" pad="2"/>
+<contactref element="IC3" pad="GND"/>
+<contactref element="IC2" pad="VSS"/>
+<contactref element="IC2" pad="GND2"/>
+<contactref element="IC2" pad="POL"/>
+<contactref element="IC2" pad="GND4"/>
+<contactref element="C3" pad="2"/>
 <contactref element="IC5" pad="GND1"/>
 <contactref element="IC5" pad="GND"/>
 <contactref element="C5" pad="2"/>
@@ -1805,8 +1806,8 @@ design rules under a new name.</description>
 <wire x1="26.416" y1="50.8" x2="34.29" y2="43.91" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="SPI_SCK">
-<contactref element="U$1" pad="D13"/>
-<contactref element="IC2" pad="SCK"/>
+<contactref element="BRD1" pad="D13"/>
+<contactref element="IC1" pad="SCK"/>
 <contactref element="IC3" pad="SCK"/>
 <contactref element="IC5" pad="B3"/>
 <wire x1="40.005" y1="44.9834" x2="43.97" y2="42.16" width="0" layer="19" extent="1-16"/>
@@ -1814,8 +1815,8 @@ design rules under a new name.</description>
 <wire x1="28.956" y1="50.8" x2="36.29" y2="42.41" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MISO">
-<contactref element="U$1" pad="D12"/>
-<contactref element="IC2" pad="SO"/>
+<contactref element="BRD1" pad="D12"/>
+<contactref element="IC1" pad="SO"/>
 <contactref element="IC3" pad="SO"/>
 <contactref element="IC5" pad="B2"/>
 <wire x1="36.29" y1="40.91" x2="31.496" y2="50.8" width="0" layer="19" extent="1-1"/>
@@ -1823,8 +1824,8 @@ design rules under a new name.</description>
 <wire x1="43.97" y1="42.66" x2="38.735" y2="38.8366" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SPI_MOSI">
-<contactref element="U$1" pad="D11"/>
-<contactref element="IC2" pad="SI"/>
+<contactref element="BRD1" pad="D11"/>
+<contactref element="IC1" pad="SI"/>
 <contactref element="IC3" pad="SI"/>
 <contactref element="IC5" pad="B4"/>
 <wire x1="36.29" y1="41.41" x2="34.036" y2="50.8" width="0" layer="19" extent="1-1"/>
@@ -1832,45 +1833,47 @@ design rules under a new name.</description>
 <wire x1="43.97" y1="41.66" x2="41.275" y2="44.9834" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$7">
-<contactref element="IC2" pad="!INT!"/>
+<contactref element="IC1" pad="!INT!"/>
 </signal>
 <signal name="TXCAN">
-<contactref element="IC2" pad="TXCAN"/>
-<contactref element="IC1" pad="TXD"/>
+<contactref element="IC1" pad="TXCAN"/>
+<contactref element="IC4" pad="TXD"/>
 <wire x1="33.995" y1="38.38" x2="33.79" y2="39.91" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="RXCAN">
-<contactref element="IC2" pad="RXCAN"/>
-<contactref element="IC1" pad="RXD"/>
+<contactref element="IC1" pad="RXCAN"/>
+<contactref element="IC4" pad="RXD"/>
 <wire x1="32.045" y1="38.38" x2="33.29" y2="39.91" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CANH">
-<contactref element="IC1" pad="CANH"/>
-<contactref element="R2" pad="2"/>
-<contactref element="X1" pad="1"/>
+<contactref element="IC4" pad="CANH"/>
+<contactref element="R6" pad="2"/>
+<contactref element="X2" pad="1"/>
 <wire x1="34.29" y1="30.48" x2="33.345" y2="35.28" width="0" layer="19" extent="16-16"/>
 <wire x1="33.97" y1="25.4" x2="34.29" y2="30.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CANL">
-<contactref element="IC1" pad="CANL"/>
-<contactref element="R2" pad="1"/>
-<contactref element="X1" pad="2"/>
+<contactref element="IC4" pad="CANL"/>
+<contactref element="R6" pad="1"/>
+<contactref element="X2" pad="2"/>
 <wire x1="31.75" y1="30.48" x2="32.695" y2="35.28" width="0" layer="19" extent="16-16"/>
 <wire x1="32.07" y1="25.4" x2="31.75" y2="30.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="5V0">
-<contactref element="IC2" pad="VDD"/>
+<contactref element="IC1" pad="VDD"/>
 <contactref element="C1" pad="1"/>
 <contactref element="R1" pad="1"/>
-<contactref element="IC1" pad="VDD"/>
-<contactref element="C2" pad="1"/>
+<contactref element="IC4" pad="VDD"/>
+<contactref element="C4" pad="1"/>
 <contactref element="IC3" pad="VCC"/>
 <contactref element="IC3" pad="!HOLD!"/>
-<contactref element="C3" pad="1"/>
+<contactref element="C2" pad="1"/>
 <contactref element="IC3" pad="!WP!"/>
-<contactref element="R3" pad="2"/>
+<contactref element="R2" pad="2"/>
 <contactref element="IC5" pad="VCCB"/>
 <contactref element="C6" pad="1"/>
+<contactref element="R4" pad="1"/>
+<wire x1="-37.78" y1="-110.49" x2="-37.78" y2="-123.19" width="0" layer="19" extent="1-1"/>
 <wire x1="-21.91" y1="-78.74" x2="-37.78" y2="-110.49" width="0" layer="19" extent="1-1"/>
 <wire x1="-23.81" y1="-72.39" x2="-21.91" y2="-78.74" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.65" y1="-27.94" x2="-23.81" y2="-72.39" width="0" layer="19" extent="1-1"/>
@@ -1884,31 +1887,33 @@ design rules under a new name.</description>
 <wire x1="37.465" y1="44.9834" x2="38.735" y2="44.9834" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="STBY">
-<contactref element="IC1" pad="STBY"/>
-<contactref element="U$1" pad="D5"/>
-<wire x1="33.995" y1="35.28" x2="50.8" y2="50.8" width="0" layer="19" extent="1-1"/>
+<contactref element="IC4" pad="STBY"/>
+<contactref element="BRD1" pad="D5"/>
+<contactref element="R4" pad="2"/>
+<wire x1="33.995" y1="35.28" x2="-35.88" y2="-123.19" width="0" layer="19" extent="1-1"/>
+<wire x1="50.8" y1="50.8" x2="33.995" y2="35.28" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
-<contactref element="IC2" pad="OSC1"/>
+<contactref element="IC1" pad="OSC1"/>
 </signal>
 <signal name="SPI_SS_FRAM">
 <contactref element="IC3" pad="!CS!"/>
-<contactref element="U$1" pad="D9"/>
-<contactref element="R3" pad="1"/>
+<contactref element="BRD1" pad="D9"/>
+<contactref element="R2" pad="1"/>
 <wire x1="37.465" y1="38.8366" x2="-23.81" y2="-78.74" width="0" layer="19" extent="1-16"/>
 <wire x1="39.116" y1="50.8" x2="37.465" y2="38.8366" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="SPI_SS_MCP2515">
-<contactref element="IC2" pad="!CS!"/>
+<contactref element="IC1" pad="!CS!"/>
 <contactref element="R1" pad="2"/>
-<contactref element="U$1" pad="D10"/>
+<contactref element="BRD1" pad="D10"/>
 <wire x1="35.29" y1="39.91" x2="36.576" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="-11.75" y1="-27.94" x2="35.29" y2="39.91" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3">
-<contactref element="IC4" pad="VDD"/>
-<contactref element="C4" pad="1"/>
-<contactref element="R4" pad="2"/>
+<contactref element="IC2" pad="VDD"/>
+<contactref element="C3" pad="1"/>
+<contactref element="R3" pad="2"/>
 <contactref element="IC5" pad="VCCA"/>
 <contactref element="C5" pad="1"/>
 <wire x1="-35.88" y1="-91.44" x2="-37.78" y2="-104.14" width="0" layer="19" extent="1-1"/>
@@ -1917,46 +1922,46 @@ design rules under a new name.</description>
 <wire x1="47.47" y1="43.16" x2="48.9" y2="40.84" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SPI_SS_SD-CARD_3V3">
-<contactref element="IC4" pad="CD/DAT3"/>
-<contactref element="R4" pad="1"/>
+<contactref element="IC2" pad="CD/DAT3"/>
+<contactref element="R3" pad="1"/>
 <contactref element="IC5" pad="A5"/>
 <wire x1="47.47" y1="41.16" x2="-37.78" y2="-91.44" width="0" layer="19" extent="1-1"/>
 <wire x1="48.9" y1="38.64" x2="47.47" y2="41.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SD_CARD_DETECT_3V3">
-<contactref element="IC4" pad="DET"/>
+<contactref element="IC2" pad="DET"/>
 <contactref element="IC5" pad="A6"/>
 <wire x1="47.47" y1="40.66" x2="44.26" y2="37.09" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MISO_3V3">
-<contactref element="IC4" pad="DAT0"/>
+<contactref element="IC2" pad="DAT0"/>
 <contactref element="IC5" pad="A2"/>
 <wire x1="47.47" y1="42.66" x2="48.9" y2="44.14" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MOSI_3V3">
-<contactref element="IC4" pad="CMD"/>
+<contactref element="IC2" pad="CMD"/>
 <contactref element="IC5" pad="A4"/>
 <wire x1="47.47" y1="41.66" x2="48.9" y2="39.74" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_SCK_3V3">
-<contactref element="IC4" pad="CLK"/>
+<contactref element="IC2" pad="CLK"/>
 <contactref element="IC5" pad="A3"/>
 <wire x1="47.47" y1="42.16" x2="48.9" y2="41.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_SS_SD-CARD">
 <contactref element="IC5" pad="B5"/>
-<contactref element="U$1" pad="D8"/>
+<contactref element="BRD1" pad="D8"/>
 <wire x1="43.97" y1="41.16" x2="41.656" y2="50.8" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SD_CARD_DETECT">
 <contactref element="IC5" pad="B6"/>
-<contactref element="U$1" pad="D6"/>
+<contactref element="BRD1" pad="D6"/>
 <wire x1="43.97" y1="40.66" x2="48.26" y2="50.8" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="OE">
 <contactref element="IC5" pad="OE"/>
 <contactref element="R5" pad="2"/>
-<contactref element="U$1" pad="D7"/>
+<contactref element="BRD1" pad="D7"/>
 <wire x1="46.47" y1="40.01" x2="-35.88" y2="-116.84" width="0" layer="19" extent="1-16"/>
 <wire x1="45.72" y1="50.8" x2="46.47" y2="40.01" width="0" layer="19" extent="16-16"/>
 </signal>
