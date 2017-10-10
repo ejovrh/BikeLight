@@ -8009,6 +8009,50 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="PRQV8.00CR1510Y00L - 8MHz resonator">
+<packages>
+<package name="SMT">
+<smd name="XTAL1" x="-1.2" y="0" dx="2" dy="0.4" layer="1" rot="R90"/>
+<smd name="GND" x="0" y="0" dx="2" dy="0.4" layer="1" rot="R90"/>
+<smd name="XTAL2" x="1.2" y="0" dx="2" dy="0.4" layer="1" rot="R90"/>
+<wire x1="1.8" y1="0.8" x2="1.8" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="0.8" x2="-1.8" y2="-0.8" width="0.127" layer="21"/>
+<text x="0" y="2.2" size="1.27" layer="25" font="vector" align="center">&gt;NAME</text>
+<text x="0" y="-2.2" size="1.27" layer="25" font="vector" align="center">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PRQV">
+<rectangle x1="0" y1="-2.54" x2="2.54" y2="2.54" layer="94"/>
+<pin name="XTAL2" x="8.89" y="0" visible="off" length="middle" rot="R180"/>
+<pin name="XTAL1" x="-6.35" y="0" visible="off" length="middle"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<text x="1.27" y="4.445" size="1.27" layer="95" font="vector" align="center">&gt;NAME</text>
+<text x="1.27" y="-4.445" size="1.27" layer="96" font="vector" align="center">&gt;VALUE</text>
+<pin name="GND" x="-5.08" y="-7.62" visible="off" length="middle" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PRQV" prefix="IC" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="PRQV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMT">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="XTAL1" pad="XTAL1"/>
+<connect gate="G$1" pin="XTAL2" pad="XTAL2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8019,7 +8063,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="BRD1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINO" device="UNO"/>
+<part name="BRD1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINO" device="UNO" value="BikeLight POC"/>
 <part name="IC4" library="MCP2561-2 - High-Speed CAN Transceiver" deviceset="MCP2561-2" device=""/>
 <part name="IC1" library="MCP2515-I-ML - Standalonce CAN Controller with SPI Interface" deviceset="MCP2515-I-ML" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
@@ -8039,6 +8083,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
+<part name="IC6" library="PRQV8.00CR1510Y00L - 8MHz resonator" deviceset="PRQV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8067,6 +8112,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="C6" gate="G$1" x="375.92" y="-111.76" rot="R180"/>
 <instance part="R5" gate="G$1" x="345.44" y="-99.06"/>
 <instance part="R4" gate="G$1" x="322.58" y="30.48" rot="R90"/>
+<instance part="IC6" gate="G$1" x="187.96" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -8076,13 +8122,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="BRD1" gate="G$1" pin="/RESET"/>
 <wire x1="10.16" y1="30.48" x2="2.54" y2="30.48" width="0.1524" layer="91"/>
 <label x="2.54" y="30.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="BRD1" gate="G$1" pin="5V"/>
-<wire x1="10.16" y1="25.4" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
-<label x="2.54" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8172,6 +8211,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="340.36" y1="-99.06" x2="335.28" y2="-99.06" width="0.1524" layer="91"/>
 <label x="335.28" y="-99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="G$1" pin="GND"/>
+<wire x1="182.88" y1="78.74" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
+<label x="182.88" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_SCK" class="0">
@@ -8361,6 +8405,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="322.58" y1="25.4" x2="322.58" y2="20.32" width="0.1524" layer="91"/>
 <label x="322.58" y="20.32" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="BRD1" gate="G$1" pin="5V"/>
+<wire x1="10.16" y1="25.4" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
+<label x="2.54" y="25.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="STBY" class="0">
 <segment>
@@ -8377,11 +8426,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="78.74" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="OSC1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="OSC1"/>
-<wire x1="195.58" y1="35.56" x2="182.88" y2="35.56" width="0.1524" layer="91"/>
-<label x="182.88" y="35.56" size="1.778" layer="95"/>
+<wire x1="195.58" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
+<label x="185.42" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="G$1" pin="XTAL1"/>
+<wire x1="181.61" y1="86.36" x2="175.26" y2="86.36" width="0.1524" layer="91"/>
+<label x="175.26" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_SS_FRAM" class="0">
@@ -8431,6 +8485,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="320.04" y1="-114.3" x2="307.34" y2="-114.3" width="0.1524" layer="91"/>
 <junction x="320.04" y="-114.3"/>
+</segment>
+<segment>
+<pinref part="BRD1" gate="G$1" pin="3V"/>
+<wire x1="10.16" y1="27.94" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
+<label x="2.54" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_SS_SD-CARD_3V3" class="0">
@@ -8535,9 +8594,30 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="78.74" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="OSC2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="OSC2"/>
+<wire x1="195.58" y1="33.02" x2="185.42" y2="33.02" width="0.1524" layer="91"/>
+<label x="185.42" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="G$1" pin="XTAL2"/>
+<wire x1="196.85" y1="86.36" x2="203.2" y2="86.36" width="0.1524" layer="91"/>
+<label x="203.2" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,10.16,20.32,BRD1,GND1,GND,,,"/>
+<approved hash="104,1,10.16,22.86,BRD1,GND2,GND,,,"/>
+<approved hash="104,1,10.16,25.4,BRD1,5V,5V0,,,"/>
+<approved hash="104,1,10.16,27.94,BRD1,3V,3V3,,,"/>
+<approved hash="104,1,281.94,35.56,IC4,VCC,5V0,,,"/>
+<approved hash="104,1,195.58,25.4,IC1,VDD,5V0,,,"/>
+<approved hash="104,1,248.92,-35.56,IC3,VCC,5V0,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
