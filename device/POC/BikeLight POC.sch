@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="8.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8053,6 +8053,209 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="ADXL345 Accelerometer">
+<description>3-Axis MEMS Digital accelerometer Analog Devices</description>
+<packages>
+<package name="LGA14">
+<description>Land Grid Array (LGA-14)</description>
+<wire x1="-1.5" y1="2.5" x2="1.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="1.5" y1="2.5" x2="1.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-2.5" x2="-1.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-2.5" x2="-1.5" y2="2.5" width="0.127" layer="51"/>
+<circle x="-1" y="2" radius="0.25" width="0.127" layer="51"/>
+<text x="-2.54" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-2.54" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<smd name="SDA" x="1.6" y="2" dx="2.145" dy="0.55" layer="1"/>
+<smd name="SDO" x="1.6" y="1.2" dx="2.145" dy="0.55" layer="1"/>
+<smd name="RESERVED1" x="1.6" y="0.4" dx="2.145" dy="0.55" layer="1"/>
+<smd name="NC" x="1.6" y="-0.4" dx="2.145" dy="0.55" layer="1"/>
+<smd name="VDD" x="-1.6" y="2" dx="2.145" dy="0.55" layer="1"/>
+<smd name="GND3" x="-1.6" y="1.2" dx="2.145" dy="0.55" layer="1"/>
+<smd name="RESERVED2" x="-1.6" y="0.4" dx="2.145" dy="0.55" layer="1"/>
+<smd name="GND2" x="-1.6" y="-0.4" dx="2.145" dy="0.55" layer="1"/>
+<smd name="SCL" x="0" y="2.6" dx="2.145" dy="0.55" layer="1" rot="R90"/>
+<smd name="INT2" x="1.6" y="-1.2" dx="2.145" dy="0.55" layer="1" rot="R180"/>
+<smd name="INT1" x="1.6" y="-2" dx="2.145" dy="0.55" layer="1" rot="R180"/>
+<smd name="GND1" x="-1.6" y="-1.2" dx="2.145" dy="0.55" layer="1" rot="R180"/>
+<smd name="VCC" x="-1.6" y="-2" dx="2.145" dy="0.55" layer="1" rot="R180"/>
+<smd name="!CS!" x="0" y="-2.6" dx="2.145" dy="0.55" layer="1" rot="R270"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ADXL345">
+<wire x1="-10.16" y1="20.32" x2="-10.16" y2="-22.86" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="-22.86" x2="10.16" y2="-22.86" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="-22.86" x2="10.16" y2="20.32" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="20.32" x2="-10.16" y2="20.32" width="0.4064" layer="94"/>
+<text x="-3.81" y="24.13" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="21.59" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="VDDIO" x="-15.24" y="17.78" length="middle" direction="pwr"/>
+<pin name="VS" x="-15.24" y="12.7" length="middle" direction="pwr"/>
+<pin name="GND$1" x="-15.24" y="7.62" length="middle" direction="pwr"/>
+<pin name="GND$2" x="-15.24" y="2.54" length="middle" direction="pwr"/>
+<pin name="GND$3" x="-15.24" y="-2.54" length="middle" direction="pwr"/>
+<pin name="NC" x="-15.24" y="-10.16" length="middle"/>
+<pin name="RESERVED$1" x="-15.24" y="-15.24" length="middle"/>
+<pin name="INT2" x="15.24" y="-7.62" length="middle" direction="out" rot="R180"/>
+<pin name="INT1" x="15.24" y="-2.54" length="middle" direction="out" rot="R180"/>
+<pin name="!CS!" x="15.24" y="2.54" length="middle" direction="in" rot="R180"/>
+<pin name="SCL" x="15.24" y="7.62" length="middle" direction="in" rot="R180"/>
+<pin name="SDO" x="15.24" y="12.7" length="middle" direction="out" rot="R180"/>
+<pin name="SDA" x="15.24" y="17.78" length="middle" direction="in" rot="R180"/>
+<pin name="RESERVED$2" x="-15.24" y="-20.32" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ADXL345" prefix="IC">
+<description>3-Axis, ±2 g/±4 g/±8 g/±16 g Digital Accelerometer</description>
+<gates>
+<gate name="G$1" symbol="ADXL345" x="5.08" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="LGA14">
+<connects>
+<connect gate="G$1" pin="!CS!" pad="!CS!"/>
+<connect gate="G$1" pin="GND$1" pad="GND1"/>
+<connect gate="G$1" pin="GND$2" pad="GND2"/>
+<connect gate="G$1" pin="GND$3" pad="GND3"/>
+<connect gate="G$1" pin="INT1" pad="INT1"/>
+<connect gate="G$1" pin="INT2" pad="INT2"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="RESERVED$1" pad="RESERVED1"/>
+<connect gate="G$1" pin="RESERVED$2" pad="RESERVED2"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="SDO" pad="SDO"/>
+<connect gate="G$1" pin="VDDIO" pad="VDD"/>
+<connect gate="G$1" pin="VS" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="74HCT1G32GW - OR Gate">
+<description>&lt;h3&gt;&lt;b&gt;TI/NXP (was Philips) Picogates&lt;/b&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;B&gt;SOT353-5 and SOT23-5 package SN74AHC1GxxGW or SN74AHCT1GxxGW family single gates&lt;/B&gt;&lt;/h4&gt;
+&lt;p align=right&gt;Version 2.0  30th Augustl 2015&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;Created by Paul Carpenter of &lt;B&gt;PC Services&lt;/B&gt;, Reading, UK., updates to this library can also be obtained from the PC Services website 
+&lt;a href="http://www.pcserviceselectronics.co.uk/"&gt;www.pcserviceselectronics.co.uk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Contains definitions for mainly dual source picogates (one gate per device) check the datasheets first.&lt;/p&gt;
+&lt;P&gt;Most devices can be powered as 3V or 5V.&lt;/P&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;b&gt;&lt;font color="#0000FF" size="4"&gt;Tables of Devices supported&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name="parallel"&gt;&lt;B&gt;Parallel Bus&lt;/B&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1&gt;
+  &lt;TR align=center bgcolor=yellow&gt;
+    &lt;TD&gt;Part Number&lt;/td&gt;
+    &lt;TD&gt;Library Name&lt;/td&gt;
+    &lt;TD&gt;Function&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G00&lt;/td&gt;
+    &lt;TD&gt;AHC00&lt;/td&gt;
+    &lt;TD&gt;Two input NAND&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G02&lt;/td&gt;
+    &lt;TD&gt;AHC02&lt;/td&gt;
+    &lt;TD&gt;Two Input NOR&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G04&lt;/td&gt;
+    &lt;TD&gt;AHC04&lt;/td&gt;
+    &lt;TD&gt;Single INVERTER&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G08&lt;/td&gt;
+    &lt;TD&gt;AHC08&lt;/td&gt;
+    &lt;TD&gt;Two input AND&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G14&lt;/td&gt;
+    &lt;TD&gt;AHC14&lt;/td&gt;
+    &lt;TD&gt;Single Schmitt INVERTER&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G32&lt;/td&gt;
+    &lt;TD&gt;AHC32&lt;/td&gt;
+    &lt;TD&gt;Two Input OR&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G86&lt;/td&gt;
+    &lt;TD&gt;AHC86&lt;/td&gt;
+    &lt;TD&gt;Two Input XOR&lt;/td&gt;
+  &lt;/TR&gt;
+  &lt;TR align=center valign=middle&gt;
+    &lt;TD align=left&gt;74AHC[T]1G125&lt;/td&gt;
+    &lt;TD&gt;AHC125&lt;/td&gt;
+    &lt;TD&gt;Single Tri-State BUFFER&lt;/td&gt;
+  &lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/center&gt;</description>
+<packages>
+<package name="SOT353/5">
+<description>SOT353/5 (SC70-5)</description>
+<wire x1="-1.2338" y1="1.9186" x2="1.2538" y2="1.9186" width="0.127" layer="21"/>
+<wire x1="1.2538" y1="1.9186" x2="1.2538" y2="-1.9064" width="0.127" layer="21"/>
+<wire x1="1.2538" y1="-1.9064" x2="-1.2338" y2="-1.9064" width="0.127" layer="21"/>
+<wire x1="-1.2338" y1="-1.9064" x2="-1.2338" y2="1.9186" width="0.127" layer="21"/>
+<wire x1="-1.297" y1="0.307" x2="-1.283" y2="-0.285" width="0.127" layer="21" curve="-176.51687" cap="flat"/>
+<smd name="VCC" x="-0.65" y="0.9" dx="0.4" dy="1.2" layer="1"/>
+<smd name="Y" x="0.65" y="0.9" dx="0.4" dy="1.2" layer="1"/>
+<smd name="B" x="-0.65" y="-0.9" dx="0.4" dy="1.2" layer="1"/>
+<smd name="A" x="0" y="-0.9" dx="0.4" dy="1.2" layer="1"/>
+<smd name="GND" x="0.65" y="-0.9" dx="0.4" dy="1.2" layer="1"/>
+<text x="-2.2" y="0" size="1.27" layer="25" font="vector" ratio="12" rot="R90" align="center">&gt;NAME</text>
+<text x="2.654" y="-3.209" size="1.27" layer="27" font="vector" ratio="12" rot="R90">&gt;VALUE</text>
+<text x="-1.2" y="-3" size="0.8128" layer="21" font="vector" ratio="12">1</text>
+</package>
+</packages>
+<symbols>
+<symbol name="OR">
+<wire x1="-1.27" y1="5.08" x2="-7.62" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-1.27" y1="-5.08" x2="-7.62" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-6.096" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-6.096" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-1.2446" y1="-5.0678" x2="7.5439" y2="0.0507" width="0.4064" layer="94" curve="60.147106" cap="flat"/>
+<wire x1="-1.2446" y1="5.0678" x2="7.5442" y2="-0.0506" width="0.4064" layer="94" curve="-60.14913" cap="flat"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.4064" layer="94" curve="-90"/>
+<text x="0" y="0" size="1.778" layer="95" align="center">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="Y" x="10.16" y="0" visible="pad" length="short" direction="out" rot="R180"/>
+<pin name="A" x="-10.16" y="2.54" visible="pad" length="short" direction="in" swaplevel="1"/>
+<pin name="B" x="-10.16" y="-2.54" visible="pad" length="short" direction="in" swaplevel="1"/>
+<pin name="VCC" x="0" y="7.62" visible="pad" length="short" direction="pwr" rot="R270"/>
+<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="74HCT1G32GW" prefix="IC" uservalue="yes">
+<description>Two Input OR gate</description>
+<gates>
+<gate name="G$1" symbol="OR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-DC" package="SOT353/5">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="Y" pad="Y"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8064,8 +8267,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </classes>
 <parts>
 <part name="BRD1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINO" device="UNO" value="BikeLight POC"/>
-<part name="IC4" library="MCP2561-2 - High-Speed CAN Transceiver" deviceset="MCP2561-2" device=""/>
-<part name="IC1" library="MCP2515-I-ML - Standalonce CAN Controller with SPI Interface" deviceset="MCP2515-I-ML" device=""/>
+<part name="IC4" library="MCP2561-2 - High-Speed CAN Transceiver" deviceset="MCP2561-2" device="" value="MCP2561-2"/>
+<part name="IC1" library="MCP2515-I-ML - Standalonce CAN Controller with SPI Interface" deviceset="MCP2515-I-ML" device="" value="MCP2515-I-ML"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
@@ -8078,12 +8281,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="IC2" library="Molex SD-47309 SD Card Slot" deviceset="MICROSD_SPI_MODE" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
-<part name="IC5" library="TXB0106 - Logic Level Translator" deviceset="TXB0106" device=""/>
+<part name="IC5" library="TXB0106 - Logic Level Translator" deviceset="TXB0106" device="" value="TXB0106"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
-<part name="IC6" library="PRQV8.00CR1510Y00L - 8MHz resonator" deviceset="PRQV" device=""/>
+<part name="IC6" library="PRQV8.00CR1510Y00L - 8MHz resonator" deviceset="PRQV" device="" value="PRQV8.00CR1510Y00L"/>
+<part name="IC7" library="ADXL345 Accelerometer" deviceset="ADXL345" device=""/>
+<part name="IC8" library="74HCT1G32GW - OR Gate" deviceset="74HCT1G32GW" device="-DC"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
+<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1μF"/>
 </parts>
 <sheets>
 <sheet>
@@ -8113,6 +8320,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="R5" gate="G$1" x="345.44" y="-99.06"/>
 <instance part="R4" gate="G$1" x="322.58" y="30.48" rot="R90"/>
 <instance part="IC6" gate="G$1" x="187.96" y="86.36"/>
+<instance part="IC7" gate="G$1" x="365.76" y="-33.02"/>
+<instance part="IC8" gate="G$1" x="419.1" y="-15.24" rot="R180"/>
+<instance part="R7" gate="G$1" x="431.8" y="-35.56" rot="R90"/>
+<instance part="C7" gate="G$1" x="335.28" y="-10.16"/>
 </instances>
 <busses>
 </busses>
@@ -8167,8 +8378,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="GND"/>
-<wire x1="220.98" y1="-43.18" x2="205.74" y2="-43.18" width="0.1524" layer="91"/>
-<label x="205.74" y="-43.18" size="1.778" layer="95"/>
+<wire x1="220.98" y1="-43.18" x2="190.5" y2="-43.18" width="0.1524" layer="91"/>
+<label x="190.5" y="-43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND1"/>
@@ -8217,13 +8428,31 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="182.88" y1="78.74" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
 <label x="182.88" y="73.66" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC7" gate="G$1" pin="GND$2"/>
+<wire x1="350.52" y1="-30.48" x2="345.44" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="IC7" gate="G$1" pin="GND$1"/>
+<wire x1="345.44" y1="-30.48" x2="330.2" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="-25.4" x2="345.44" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="-25.4" x2="345.44" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="345.44" y="-30.48"/>
+<pinref part="IC7" gate="G$1" pin="GND$3"/>
+<wire x1="350.52" y1="-35.56" x2="345.44" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="-35.56" x2="345.44" y2="-30.48" width="0.1524" layer="91"/>
+<label x="330.2" y="-30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC8" gate="G$1" pin="GND"/>
+<wire x1="419.1" y1="-7.62" x2="419.1" y2="0" width="0.1524" layer="91"/>
+<label x="419.1" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="335.28" y1="-7.62" x2="335.28" y2="-2.54" width="0.1524" layer="91"/>
+<label x="335.28" y="-2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPI_SCK" class="0">
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D13"/>
-<wire x1="71.12" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
-<label x="78.74" y="38.1" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="SCK"/>
 <wire x1="195.58" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
@@ -8239,13 +8468,13 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="365.76" y1="-124.46" x2="381" y2="-124.46" width="0.1524" layer="91"/>
 <label x="381" y="-124.46" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC7" gate="G$1" pin="SCL"/>
+<wire x1="381" y1="-25.4" x2="388.62" y2="-25.4" width="0.1524" layer="91"/>
+<label x="388.62" y="-25.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPI_MISO" class="0">
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D12"/>
-<wire x1="71.12" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
-<label x="78.74" y="35.56" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="SO"/>
 <wire x1="195.58" y1="50.8" x2="165.1" y2="50.8" width="0.1524" layer="91"/>
@@ -8253,21 +8482,21 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="SO"/>
-<wire x1="220.98" y1="-38.1" x2="205.74" y2="-38.1" width="0.1524" layer="91"/>
-<label x="205.74" y="-38.1" size="1.778" layer="95"/>
+<wire x1="220.98" y1="-38.1" x2="190.5" y2="-38.1" width="0.1524" layer="91"/>
+<label x="190.5" y="-38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="B2"/>
 <wire x1="365.76" y1="-121.92" x2="381" y2="-121.92" width="0.1524" layer="91"/>
 <label x="381" y="-121.92" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC7" gate="G$1" pin="SDO"/>
+<wire x1="381" y1="-20.32" x2="388.62" y2="-20.32" width="0.1524" layer="91"/>
+<label x="388.62" y="-20.32" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPI_MOSI" class="0">
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D11"/>
-<wire x1="71.12" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
-<label x="78.74" y="33.02" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="SI"/>
 <wire x1="195.58" y1="48.26" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
@@ -8284,7 +8513,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="381" y="-127" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="MCP2515_INT" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="!INT!"/>
 <wire x1="236.22" y1="25.4" x2="241.3" y2="25.4" width="0.1524" layer="91"/>
@@ -8384,8 +8613,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="!WP!"/>
-<wire x1="220.98" y1="-40.64" x2="205.74" y2="-40.64" width="0.1524" layer="91"/>
-<label x="205.74" y="-40.64" size="1.778" layer="95"/>
+<wire x1="220.98" y1="-40.64" x2="190.5" y2="-40.64" width="0.1524" layer="91"/>
+<label x="190.5" y="-40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
@@ -8410,6 +8639,22 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="10.16" y1="25.4" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
 <label x="2.54" y="25.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="431.8" y1="-40.64" x2="431.8" y2="-45.72" width="0.1524" layer="91"/>
+<label x="431.8" y="-45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC7" gate="G$1" pin="VS"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="350.52" y1="-20.32" x2="335.28" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="-20.32" x2="335.28" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="IC7" gate="G$1" pin="VDDIO"/>
+<wire x1="350.52" y1="-15.24" x2="335.28" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="335.28" y="-15.24"/>
+<wire x1="335.28" y1="-15.24" x2="330.2" y2="-15.24" width="0.1524" layer="91"/>
+<label x="330.2" y="-15.24" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="STBY" class="0">
 <segment>
@@ -8419,11 +8664,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="322.58" y1="35.56" x2="327.66" y2="35.56" width="0.1524" layer="91"/>
 <junction x="322.58" y="35.56"/>
-</segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D5"/>
-<wire x1="71.12" y1="15.24" x2="78.74" y2="15.24" width="0.1524" layer="91"/>
-<label x="78.74" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OSC1" class="0">
@@ -8442,15 +8682,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="IC3" gate="G$1" pin="!CS!"/>
 <wire x1="220.98" y1="-35.56" x2="210.82" y2="-35.56" width="0.1524" layer="91"/>
-<label x="205.74" y="-35.56" size="1.778" layer="95"/>
+<label x="190.5" y="-35.56" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="210.82" y1="-35.56" x2="205.74" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="-35.56" x2="190.5" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="210.82" y="-35.56"/>
-</segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D9"/>
-<wire x1="71.12" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
-<label x="78.74" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_SS_MCP2515" class="0">
@@ -8461,11 +8696,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="43.18" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
 <junction x="177.8" y="43.18"/>
-</segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D10"/>
-<wire x1="71.12" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
-<label x="78.74" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -8561,22 +8791,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="365.76" y1="-129.54" x2="381" y2="-129.54" width="0.1524" layer="91"/>
 <label x="381" y="-129.54" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D8"/>
-<wire x1="71.12" y1="25.4" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
-<label x="78.74" y="25.4" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="SD_CARD_DETECT" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="B6"/>
 <wire x1="365.76" y1="-132.08" x2="381" y2="-132.08" width="0.1524" layer="91"/>
 <label x="381" y="-132.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D6"/>
-<wire x1="71.12" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
-<label x="78.74" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OE" class="0">
@@ -8587,11 +8807,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="350.52" y1="-99.06" x2="350.52" y2="-93.98" width="0.1524" layer="91"/>
 <junction x="350.52" y="-99.06"/>
-</segment>
-<segment>
-<pinref part="BRD1" gate="G$1" pin="D7"/>
-<wire x1="71.12" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
-<label x="78.74" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OSC2" class="0">
@@ -8604,6 +8819,187 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="IC6" gate="G$1" pin="XTAL2"/>
 <wire x1="196.85" y1="86.36" x2="203.2" y2="86.36" width="0.1524" layer="91"/>
 <label x="203.2" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="IC7" gate="G$1" pin="SDA"/>
+<pinref part="IC8" gate="G$1" pin="Y"/>
+<wire x1="381" y1="-15.24" x2="408.94" y2="-15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SPI_MOSI_PIN" class="0">
+<segment>
+<pinref part="IC8" gate="G$1" pin="B"/>
+<wire x1="429.26" y1="-12.7" x2="441.96" y2="-12.7" width="0.1524" layer="91"/>
+<label x="441.96" y="-12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ADXL345_INT1_INTERRUPT_PIN" class="0">
+<segment>
+<pinref part="IC7" gate="G$1" pin="INT1"/>
+<wire x1="381" y1="-35.56" x2="388.62" y2="-35.56" width="0.1524" layer="91"/>
+<label x="388.62" y="-35.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI_SS_ADXL345_PIN" class="0">
+<segment>
+<pinref part="IC7" gate="G$1" pin="!CS!"/>
+<wire x1="381" y1="-30.48" x2="431.8" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="431.8" y1="-30.48" x2="431.8" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="IC8" gate="G$1" pin="A"/>
+<wire x1="431.8" y1="-17.78" x2="429.26" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<junction x="431.8" y="-30.48"/>
+<label x="441.96" y="-30.48" size="1.778" layer="95"/>
+<wire x1="431.8" y1="-30.48" x2="441.96" y2="-30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="P0.14-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D2"/>
+<wire x1="71.12" y1="7.62" x2="78.74" y2="7.62" width="0.1524" layer="91"/>
+<label x="78.74" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.13-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D1"/>
+<wire x1="71.12" y1="5.08" x2="78.74" y2="5.08" width="0.1524" layer="91"/>
+<label x="78.74" y="5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.12-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D0"/>
+<wire x1="71.12" y1="2.54" x2="78.74" y2="2.54" width="0.1524" layer="91"/>
+<label x="78.74" y="2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.01-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A0"/>
+<wire x1="10.16" y1="12.7" x2="2.54" y2="12.7" width="0.1524" layer="91"/>
+<label x="2.54" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.02-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A1"/>
+<wire x1="10.16" y1="10.16" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
+<label x="2.54" y="10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.03-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A2"/>
+<wire x1="10.16" y1="7.62" x2="2.54" y2="7.62" width="0.1524" layer="91"/>
+<label x="2.54" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.04-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A3"/>
+<wire x1="10.16" y1="5.08" x2="2.54" y2="5.08" width="0.1524" layer="91"/>
+<label x="2.54" y="5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.05-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A4"/>
+<wire x1="10.16" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
+<label x="2.54" y="2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.06-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="A5"/>
+<wire x1="10.16" y1="0" x2="2.54" y2="0" width="0.1524" layer="91"/>
+<label x="2.54" y="0" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.15-MCP2515_INT" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D3"/>
+<wire x1="71.12" y1="10.16" x2="78.74" y2="10.16" width="0.1524" layer="91"/>
+<label x="78.74" y="10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.16-STBY" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D4"/>
+<wire x1="71.12" y1="12.7" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<label x="78.74" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.17-SD_CARD_DETECT" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D5"/>
+<wire x1="71.12" y1="15.24" x2="78.74" y2="15.24" width="0.1524" layer="91"/>
+<label x="78.74" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.18-OE" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D6"/>
+<wire x1="71.12" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
+<label x="78.74" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.19-SPI_SS_ADXL345_PIN" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D7"/>
+<wire x1="71.12" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
+<label x="78.74" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.20-SPI_SS_SD-CARD" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D8"/>
+<wire x1="71.12" y1="25.4" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
+<label x="78.74" y="25.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.23-SPI_SS_FRAM" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D9"/>
+<wire x1="71.12" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
+<label x="78.74" y="27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.24-SPI_SS_MCP2515" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D10"/>
+<wire x1="71.12" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
+<label x="78.74" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.25-SPI_MOSI" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D11"/>
+<wire x1="71.12" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
+<label x="78.74" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.28-SPI_MISO" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D12"/>
+<wire x1="71.12" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
+<label x="78.74" y="35.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.29-SPI_SCK" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="D13"/>
+<wire x1="71.12" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
+<label x="78.74" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="P0.00-" class="0">
+<segment>
+<pinref part="BRD1" gate="G$1" pin="AREF"/>
+<wire x1="71.12" y1="43.18" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
+<label x="78.74" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
