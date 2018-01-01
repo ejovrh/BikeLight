@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="12.5" unitdist="mil" unit="mm" style="dots" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="dots" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2082,7 +2082,7 @@ design rules under a new name.</description>
 <element name="LI-ION" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="" x="63.5" y="12.3825" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="63.5" y="12.3825" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="22-23-2021" x="63.5" y="12.3825" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="59.3725" y="12.3825" size="1" layer="25" font="vector" rot="R90" align="center"/>
+<attribute name="NAME" x="67.6275" y="12.3825" size="1" layer="25" font="vector" rot="R90" align="center"/>
 <attribute name="OC_FARNELL" value="1462926" x="63.5" y="12.3825" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="25C3832" x="63.5" y="12.3825" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="68.58" y="9.8425" size="1.016" layer="27" ratio="10" rot="R90"/>
@@ -2090,7 +2090,7 @@ design rules under a new name.</description>
 <element name="CAN" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2021" value="" x="63.5" y="26.67" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="63.5" y="26.67" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="22-23-2021" x="63.5" y="26.67" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="59.3725" y="26.67" size="1" layer="25" font="vector" rot="R90" align="center"/>
+<attribute name="NAME" x="67.6275" y="26.67" size="1" layer="25" font="vector" rot="R90" align="center"/>
 <attribute name="OC_FARNELL" value="1462926" x="63.5" y="26.67" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="25C3832" x="63.5" y="26.67" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="68.58" y="24.13" size="1.016" layer="27" ratio="10" rot="R90"/>
@@ -2327,7 +2327,8 @@ design rules under a new name.</description>
 <wire x1="44.7675" y1="26.4795" x2="44.577" y2="26.67" width="0.254" layer="16"/>
 <wire x1="44.577" y1="26.67" x2="42.545" y2="26.67" width="0.254" layer="16"/>
 <wire x1="40.3225" y1="25.08" x2="40.6425" y2="25.4" width="0.254" layer="16"/>
-<wire x1="40.3225" y1="14.2875" x2="40.3225" y2="25.08" width="0.254" layer="16"/>
+<wire x1="40.3225" y1="14.2875" x2="40.3225" y2="17.78" width="0.254" layer="16"/>
+<wire x1="40.3225" y1="17.78" x2="40.3225" y2="25.08" width="0.254" layer="16"/>
 <wire x1="42.3135" y1="44.5865" x2="44.355" y2="42.545" width="0.254" layer="1"/>
 <wire x1="32.839" y1="44.5865" x2="42.3135" y2="44.5865" width="0.254" layer="1"/>
 <wire x1="51.12" y1="27.94" x2="51.12" y2="37.4625" width="0.254" layer="16"/>
@@ -2356,6 +2357,12 @@ design rules under a new name.</description>
 <wire x1="35.2575" y1="37.45" x2="35.2425" y2="37.465" width="0.254" layer="1"/>
 <wire x1="35.2425" y1="37.465" x2="34.925" y2="37.7825" width="0.254" layer="16"/>
 <wire x1="40.3225" y1="14.2875" x2="38.1" y2="12.065" width="0.254" layer="1"/>
+<contactref element="LED1" pad="A"/>
+<wire x1="51.59" y1="14.605" x2="50.165" y2="14.605" width="0.254" layer="1"/>
+<via x="50.165" y="14.605" extent="1-16" drill="0.35"/>
+<wire x1="48.5775" y1="17.78" x2="50.165" y2="16.1925" width="0.254" layer="16"/>
+<wire x1="40.3225" y1="17.78" x2="48.5775" y2="17.78" width="0.254" layer="16"/>
+<wire x1="50.165" y1="16.1925" x2="50.165" y2="14.605" width="0.254" layer="16"/>
 </signal>
 <signal name="OSC1">
 <contactref element="IC1" pad="OSC1"/>
@@ -2584,10 +2591,6 @@ design rules under a new name.</description>
 <wire x1="46.0375" y1="14.2875" x2="46.0375" y2="11.06" width="0.254" layer="1"/>
 <wire x1="44.58" y1="11.06" x2="46.0375" y2="11.06" width="0.254" layer="1"/>
 <wire x1="48.7917" y1="11.06" x2="48.8442" y2="11.1125" width="0.254" layer="1"/>
-<contactref element="LED1" pad="A"/>
-<wire x1="51.59" y1="14.605" x2="51.59" y2="12.22" width="0.254" layer="1"/>
-<wire x1="51.59" y1="12.22" x2="50.4825" y2="11.1125" width="0.254" layer="1"/>
-<wire x1="50.4825" y1="11.1125" x2="48.8442" y2="11.1125" width="0.254" layer="1"/>
 <wire x1="48.5775" y1="14.2875" x2="46.0375" y2="14.2875" width="0.254" layer="1"/>
 </signal>
 <signal name="P0.29-OE">
@@ -2805,6 +2808,23 @@ design rules under a new name.</description>
 <errors>
 <approved hash="5,16,8490139aefcb7aaf"/>
 <approved hash="5,16,fdea6a0e945f01d5"/>
+<approved hash="19,1,c3d2cb538ce239e3"/>
+<approved hash="19,1,c3d2cb538ce239e3"/>
+<approved hash="19,1,f5907f1f2fd418db"/>
+<approved hash="19,1,afe8ede96594e327"/>
+<approved hash="19,1,7560e07abb31dc55"/>
+<approved hash="19,16,d3ce5fb0fd6f15ab"/>
+<approved hash="19,16,d99de3452c7a0958"/>
+<approved hash="19,16,da2321a73e5bce67"/>
+<approved hash="19,16,5dd8062ca85d6fdd"/>
+<approved hash="19,16,bb60559ced9a0366"/>
+<approved hash="19,16,b3a61ba01de7b5e1"/>
+<approved hash="19,16,5a0b262859750fed"/>
+<approved hash="19,16,32eef5f1109bd5fc"/>
+<approved hash="19,16,ef134e6906247aa0"/>
+<approved hash="19,16,159de300ba5c4eb9"/>
+<approved hash="19,16,bb27e221e469bd6f"/>
+<approved hash="19,16,8a844d824bcb8ccd"/>
 </errors>
 </board>
 </drawing>
