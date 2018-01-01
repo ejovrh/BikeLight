@@ -11675,17 +11675,17 @@ Source: www.kingbright.com</description>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7μF"/>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7μF"/>
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7μF"/>
-<part name="S1" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
+<part name="POWER" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100k"/>
 <part name="IC8" library="74HCT1G32GW - OR Gate" deviceset="74HCT1G32GW" device="-DC" value="74HCT1G32"/>
-<part name="TP1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1"/>
-<part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1"/>
-<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1"/>
-<part name="TP4" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1"/>
-<part name="TP5" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
-<part name="TP6" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
-<part name="TP7" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
-<part name="TP9" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
+<part name="CAN_GND" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1"/>
+<part name="MOSI" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value=""/>
+<part name="MISO" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value=""/>
+<part name="SCK" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="PAD1-13Y" package3d_urn="urn:adsk.eagle:package:27947/1" value=""/>
+<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value=""/>
+<part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value=""/>
+<part name="TP4" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value=""/>
+<part name="TP1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value=""/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="  LTST-C230KSKT"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 </parts>
@@ -11777,17 +11777,17 @@ Source: www.kingbright.com</description>
 <instance part="C9" gate="G$1" x="119.38" y="-48.26" rot="R180"/>
 <instance part="C10" gate="G$1" x="81.28" y="-101.6" rot="R180"/>
 <instance part="C11" gate="G$1" x="119.38" y="-101.6" rot="R180"/>
-<instance part="S1" gate="G$1" x="93.98" y="-170.18" rot="R90"/>
+<instance part="POWER" gate="G$1" x="93.98" y="-170.18" rot="R90"/>
 <instance part="R8" gate="G$1" x="101.6" y="-175.26" rot="R90"/>
 <instance part="IC8" gate="G$1" x="365.76" y="-48.26" rot="R180"/>
-<instance part="TP1" gate="G$1" x="-7.62" y="-68.58" rot="R270"/>
-<instance part="TP2" gate="G$1" x="-7.62" y="-78.74" rot="R270"/>
-<instance part="TP3" gate="G$1" x="-7.62" y="-88.9" rot="R270"/>
-<instance part="TP4" gate="G$1" x="-7.62" y="-99.06" rot="R270"/>
-<instance part="TP5" gate="G$1" x="-7.62" y="-109.22" rot="R270"/>
-<instance part="TP6" gate="G$1" x="-7.62" y="-119.38" rot="R270"/>
-<instance part="TP7" gate="G$1" x="-7.62" y="-129.54" rot="R270"/>
-<instance part="TP9" gate="G$1" x="-7.62" y="-139.7" rot="R270"/>
+<instance part="CAN_GND" gate="G$1" x="-7.62" y="-68.58" rot="R270"/>
+<instance part="MOSI" gate="G$1" x="-7.62" y="-78.74" rot="R270"/>
+<instance part="MISO" gate="G$1" x="-7.62" y="-88.9" rot="R270"/>
+<instance part="SCK" gate="G$1" x="-7.62" y="-99.06" rot="R270"/>
+<instance part="TP3" gate="G$1" x="-7.62" y="-124.46" rot="R90"/>
+<instance part="TP2" gate="G$1" x="-7.62" y="-116.84" rot="R90"/>
+<instance part="TP4" gate="G$1" x="-7.62" y="-132.08" rot="R90"/>
+<instance part="TP1" gate="G$1" x="-7.62" y="-109.22" rot="R90"/>
 <instance part="LED1" gate="G$1" x="101.6" y="-165.1" rot="R180"/>
 <instance part="R9" gate="G$1" x="101.6" y="-154.94" rot="R90"/>
 </instances>
@@ -11958,7 +11958,7 @@ Source: www.kingbright.com</description>
 <label x="-12.7" y="-55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP1" gate="G$1" pin="TP"/>
+<pinref part="CAN_GND" gate="G$1" pin="TP"/>
 <wire x1="-5.08" y1="-68.58" x2="0" y2="-68.58" width="0.1524" layer="91"/>
 <label x="0" y="-68.58" size="1.778" layer="95"/>
 </segment>
@@ -12281,7 +12281,7 @@ Source: www.kingbright.com</description>
 <junction x="81.28" y="-104.14"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="POWER" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="-170.18" x2="68.58" y2="-170.18" width="0.1524" layer="91"/>
 <label x="68.58" y="-170.18" size="1.778" layer="95"/>
 </segment>
@@ -12353,9 +12353,9 @@ Source: www.kingbright.com</description>
 <junction x="198.12" y="-66.04"/>
 </segment>
 <segment>
-<pinref part="TP6" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-119.38" x2="0" y2="-119.38" width="0.1524" layer="91"/>
-<label x="0" y="-119.38" size="1.778" layer="95"/>
+<pinref part="TP2" gate="G$1" pin="TP"/>
+<wire x1="-5.08" y1="-116.84" x2="0" y2="-116.84" width="0.1524" layer="91"/>
+<label x="0" y="-116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="P0.00-" class="0">
@@ -12377,7 +12377,7 @@ Source: www.kingbright.com</description>
 <label x="71.12" y="-109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="1"/>
+<pinref part="POWER" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="-170.18" x2="101.6" y2="-170.18" width="0.1524" layer="91"/>
 <label x="109.22" y="-170.18" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="2"/>
@@ -12417,9 +12417,9 @@ Source: www.kingbright.com</description>
 <junction x="177.8" y="33.02"/>
 </segment>
 <segment>
-<pinref part="TP7" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-129.54" x2="0" y2="-129.54" width="0.1524" layer="91"/>
-<label x="0" y="-129.54" size="1.778" layer="95"/>
+<pinref part="TP4" gate="G$1" pin="TP"/>
+<wire x1="-5.08" y1="-132.08" x2="0" y2="-132.08" width="0.1524" layer="91"/>
+<label x="0" y="-132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="P0.28-SD_CARD_DETECT" class="0">
@@ -12461,7 +12461,7 @@ Source: www.kingbright.com</description>
 <label x="330.2" y="-58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP4" gate="G$1" pin="TP"/>
+<pinref part="SCK" gate="G$1" pin="TP"/>
 <wire x1="-5.08" y1="-99.06" x2="0" y2="-99.06" width="0.1524" layer="91"/>
 <label x="0" y="-99.06" size="1.778" layer="95"/>
 </segment>
@@ -12478,9 +12478,9 @@ Source: www.kingbright.com</description>
 <label x="363.22" y="-152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP9" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-139.7" x2="0" y2="-139.7" width="0.1524" layer="91"/>
-<label x="0" y="-139.7" size="1.778" layer="95"/>
+<pinref part="TP1" gate="G$1" pin="TP"/>
+<wire x1="-5.08" y1="-109.22" x2="0" y2="-109.22" width="0.1524" layer="91"/>
+<label x="0" y="-109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="P0.20-ADXL345_INT1_INTERRUPT_PIN" class="0">
@@ -12513,9 +12513,9 @@ Source: www.kingbright.com</description>
 <pinref part="IC8" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<pinref part="TP5" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-109.22" x2="0" y2="-109.22" width="0.1524" layer="91"/>
-<label x="0" y="-109.22" size="1.778" layer="95"/>
+<pinref part="TP3" gate="G$1" pin="TP"/>
+<wire x1="-5.08" y1="-124.46" x2="0" y2="-124.46" width="0.1524" layer="91"/>
+<label x="0" y="-124.46" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="P0.13-" class="0">
@@ -12552,7 +12552,7 @@ Source: www.kingbright.com</description>
 <label x="330.2" y="-53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP3" gate="G$1" pin="TP"/>
+<pinref part="MISO" gate="G$1" pin="TP"/>
 <wire x1="-5.08" y1="-88.9" x2="0" y2="-88.9" width="0.1524" layer="91"/>
 <label x="0" y="-88.9" size="1.778" layer="95"/>
 </segment>
@@ -12591,7 +12591,7 @@ Source: www.kingbright.com</description>
 <pinref part="IC8" gate="G$1" pin="B"/>
 </segment>
 <segment>
-<pinref part="TP2" gate="G$1" pin="TP"/>
+<pinref part="MOSI" gate="G$1" pin="TP"/>
 <wire x1="-5.08" y1="-78.74" x2="0" y2="-78.74" width="0.1524" layer="91"/>
 <label x="0" y="-78.74" size="1.778" layer="95"/>
 </segment>
